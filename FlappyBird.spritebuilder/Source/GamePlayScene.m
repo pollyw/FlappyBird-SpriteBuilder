@@ -12,6 +12,9 @@
     
     //add character as a child of physicsnode so physics will be applied ot it
     [physicsNode addChild:character];
+    
+    //add obstacles
+    [self addObstacle];
 }
 
 -(void)update:(CCTime)delta
@@ -22,7 +25,7 @@
 // put new methods here
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     //this will be called everytime the player touches the screen
-    //whenever screen touch, method flap will apply to character
+    //whenever screen touch, method flap will apply to character to make it fly up
     [character flap];
 
 }
